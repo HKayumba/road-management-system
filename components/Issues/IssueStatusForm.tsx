@@ -36,9 +36,9 @@ export function IssueStatusForm({ issueId, currentStatus }: IssueStatusFormProps
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-2">
+    <form onSubmit={handleSubmit} className="space-y-2 w-full">
       <Select value={status} onValueChange={setStatus}>
-        <SelectTrigger>
+        <SelectTrigger className="w-full">
           <SelectValue />
         </SelectTrigger>
         <SelectContent>

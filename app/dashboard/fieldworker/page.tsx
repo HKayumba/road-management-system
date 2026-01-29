@@ -190,7 +190,7 @@ export default async function FieldWorkerDashboard() {
                         )}
                       </div>
                     </div>
-                    <div className="min-w-50">
+                    <div className="w-full max-w-xs">
                       <IssueStatusForm issueId={issue.id} currentStatus={issue.status} />
                     </div>
                   </div>
