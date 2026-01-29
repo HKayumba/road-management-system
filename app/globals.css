@@ -129,7 +129,7 @@
   }
   /* Heading colors - Primary: Deep Blue #1E3A8A */
   h1, h2, h3, h4, h5, h6 {
-    @apply text-[#1E3A8A];
+    color: #1E3A8A !important;
   }
   /* Links - cursor pointer on hover */
   a {

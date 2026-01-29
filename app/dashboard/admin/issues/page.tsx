@@ -169,7 +169,7 @@ export default async function AdminIssuesPage() {
                         </div>
                       )}
                     </div>
-                    <div className="flex flex-col gap-2 min-w-[200px]">
+                    <div className="flex flex-col gap-2 min-w-50">
                       <IssueStatusForm issueId={issue.id} currentStatus={issue.status} />
                       <IssueAssignForm
                         issueId={issue.id}
