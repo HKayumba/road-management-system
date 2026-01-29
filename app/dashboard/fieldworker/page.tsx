@@ -65,6 +65,11 @@ export default async function FieldWorkerDashboard() {
     }
   };
 
+  const totalMyForChart = myStats.total || 1;
+  const myReportedPct = (myStats.reported / totalMyForChart) * 100;
+  const myInProgressPct = (myStats.inProgress / totalMyForChart) * 100;
+  const myCompletedPct = (myStats.completed / totalMyForChart) * 100;
+
   return (
     <div className="space-y-6">
       <div>
@@ -114,6 +119,59 @@ export default async function FieldWorkerDashboard() {
           </CardContent>
         </Card>
       </div>
+
+      {/* My Issue Status Distribution (Simple Bar Chart) */}
+      <Card>
+        <CardHeader>
+          <CardTitle>My Issue Status Distribution</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="space-y-1">
+            <div className="flex items-center justify-between text-sm">
+              <span>Reported</span>
+              <span className="text-muted-foreground">
+                {myStats.reported} ({Math.round(myReportedPct)}%)
+              </span>
+            </div>
+            <div className="h-2 w-full rounded-full bg-muted">
+              <div
+                className="h-2 rounded-full bg-yellow-400"
+                style={{ width: `${myReportedPct}%` }}
+              />
+            </div>
+          </div>
+
+          <div className="space-y-1">
+            <div className="flex items-center justify-between text-sm">
+              <span>In Progress</span>
+              <span className="text-muted-foreground">
+                {myStats.inProgress} ({Math.round(myInProgressPct)}%)
+              </span>
+            </div>
+            <div className="h-2 w-full rounded-full bg-muted">
+              <div
+                className="h-2 rounded-full bg-blue-500"
+                style={{ width: `${myInProgressPct}%` }}
+              />
+            </div>
+          </div>
+
+          <div className="space-y-1">
+            <div className="flex items-center justify-between text-sm">
+              <span>Completed</span>
+              <span className="text-muted-foreground">
+                {myStats.completed} ({Math.round(myCompletedPct)}%)
+              </span>
+            </div>
+            <div className="h-2 w-full rounded-full bg-muted">
+              <div
+                className="h-2 rounded-full bg-green-500"
+                style={{ width: `${myCompletedPct}%` }}
+              />
+            </div>
+          </div>
+        </CardContent>
+      </Card>
 
       {/* Report New Issue */}
       <Card>
