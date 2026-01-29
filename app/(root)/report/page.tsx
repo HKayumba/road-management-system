@@ -1,3 +1,16 @@
+/**
+ * Public Issue Reporting Page
+ * 
+ * Allows citizens to report road maintenance issues without requiring an account.
+ * Features:
+ * - Public access (no authentication required)
+ * - Issue reporting form with photo upload
+ * - GPS location capture (optional)
+ * - Civilian report indicator
+ * 
+ * Route: /report
+ * Component: ReportForm (handles form submission and image upload)
+ */
 "use client";
 
 import Link from "next/link";

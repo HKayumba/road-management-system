@@ -79,8 +79,9 @@
   --sidebar-foreground: oklch(0.129 0.042 264.695);
   --sidebar-primary: #1E3A8A;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  /* Sidebar accent for active items - using light primary background */
+  --sidebar-accent: #E0E7FF;
+  --sidebar-accent-foreground: #1E3A8A;
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: #1E3A8A;
 }

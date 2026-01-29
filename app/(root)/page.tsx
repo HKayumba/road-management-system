@@ -1,3 +1,19 @@
+/**
+ * Home Page (Landing Page)
+ * 
+ * Public-facing homepage for the Road Maintenance Management System.
+ * Displays:
+ * - Hero section with call-to-action buttons
+ * - System statistics
+ * - Features and benefits
+ * - How it works process
+ * - Types of issues that can be reported
+ * - Final call-to-action section
+ * 
+ * Routes:
+ * - /report - Public issue reporting form
+ * - /auth/login - Staff login page
+ */
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, MapPin } from "lucide-react";
@@ -144,7 +160,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {roadIssue.map((issue, index) => (
-              <Card key={index} className="border-border bg-card text-center">
+              <Card key={index} className="border border-t-4 border-t-red-500 bg-card text-center hover:scale-104 duration-300">
                 <CardContent className="p-6">
                   <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-destructive/10">
                     <issue.icon className="h-7 w-7 text-destructive" />
@@ -173,7 +189,7 @@ export default function Home() {
               It takes less than 2 minutes to submit a report. Help us maintain
               safer roads for everyone.
             </p>
-            <Link href="/report-issue">
+            <Link href="/report">
               <Button className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-primary-foreground text-primary font-medium hover:bg-primary-foreground/90 transition-colors">
                 Report Now
                 <ArrowRight className="w-5 h-5" />

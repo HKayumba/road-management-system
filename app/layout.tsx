@@ -1,3 +1,15 @@
+/**
+ * Root Layout Component (App-Level)
+ * 
+ * The top-level layout for the entire Next.js application.
+ * Provides:
+ * - Global font configuration (Geist Sans and Geist Mono)
+ * - Global CSS styles
+ * - HTML document structure
+ * - SEO metadata
+ * 
+ * This layout wraps all pages in the application.
+ */
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";

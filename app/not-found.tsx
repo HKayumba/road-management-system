@@ -1,3 +1,15 @@
+/**
+ * 404 Not Found Page
+ * 
+ * Custom error page displayed when a user navigates to a non-existent route.
+ * Features:
+ * - Themed 404 error message with road maintenance context
+ * - Navigation buttons to return to homepage or report an issue
+ * - Decorative elements matching the application theme
+ * 
+ * Route: Any non-existent route (handled by Next.js automatically)
+ * Access: Public
+ */
 import Link from "next/link";
 import { MoveLeft, HardHat, TriangleAlert } from "lucide-react";
 import { Button } from "@/components/ui/button";

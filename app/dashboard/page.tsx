@@ -1,3 +1,13 @@
+/**
+ * Dashboard Root Page
+ * 
+ * Entry point for authenticated users. Redirects to role-specific dashboards:
+ * - Admin users -> /dashboard/admin
+ * - Field Worker users -> /dashboard/fieldworker
+ * 
+ * Route: /dashboard
+ * Access: Protected (requires authentication)
+ */
 import { redirect } from "next/navigation";
 import { getSession } from "@/app/auth/actions/actions";
 

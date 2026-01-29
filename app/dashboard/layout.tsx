@@ -1,3 +1,20 @@
+/**
+ * Dashboard Layout Component
+ * 
+ * Shared layout wrapper for all dashboard pages. Provides:
+ * - Authentication check (redirects to login if not authenticated)
+ * - Role-based sidebar navigation (different nav items for Admin vs Field Worker)
+ * - Sidebar with collapsible navigation
+ * - Header with breadcrumbs and logout button
+ * - User information display
+ * 
+ * Navigation Items:
+ * - Admin: Dashboard, Issues (with sub-items), Field Workers (with sub-items)
+ * - Field Worker: Dashboard, Report Issue
+ * 
+ * Route: /dashboard/* (all dashboard routes)
+ * Access: Protected (requires authentication)
+ */
 import { redirect } from "next/navigation";
 import { getSession } from "@/app/auth/actions/actions";
 import { AppSidebar } from "@/components/dashboard/app-sidebar";

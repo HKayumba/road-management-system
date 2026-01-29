@@ -1,3 +1,22 @@
+/**
+ * Admin Issues Management Page
+ * 
+ * Comprehensive page for managing all road maintenance issues.
+ * Features:
+ * - View all issues with full details (road name, location, type, severity, status)
+ * - Issue images with full-size preview
+ * - GPS coordinates display
+ * - Update issue status (Reported, In Progress, Completed)
+ * - Assign issues to field workers
+ * - View assigned worker information
+ * 
+ * Components:
+ * - IssueStatusForm: Update issue status (Admin and assigned worker can update)
+ * - IssueAssignForm: Assign issues to field workers (Admin only)
+ * 
+ * Route: /dashboard/admin/issues
+ * Access: Admin role required
+ */
 import { redirect } from "next/navigation";
 import { getSession } from "@/app/auth/actions/actions";
 import { getIssues } from "@/app/issues/actions";
