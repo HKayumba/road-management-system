@@ -1,0 +1,1 @@
+ALTER TABLE "road_issues" ADD COLUMN "photo_url" text;
