@@ -1,21 +1,3 @@
-/**
- * Field Worker Dashboard Page
- * 
- * Main dashboard for Field Worker users. Displays:
- * - Personal statistics (My Issues, Reported, In Progress, Completed)
- * - Form to report new issues (automatically assigned to current user)
- * - List of issues assigned to the logged-in field worker
- * - Ability to update status of assigned issues
- * 
- * Features:
- * - Role-based access control (Field Worker only)
- * - Only shows issues assigned to the current user
- * - Can update status of assigned issues (Reported -> In Progress -> Completed)
- * - Can report new issues directly from dashboard
- * 
- * Route: /dashboard/fieldworker
- * Access: Field Worker role required
- */
 import { redirect } from "next/navigation";
 import { getSession } from "@/app/auth/actions/actions";
 import { getIssuesByAssignee, getDashboardStats } from "@/app/issues/actions";
@@ -190,7 +172,7 @@ export default async function FieldWorkerDashboard() {
                         )}
                       </div>
                     </div>
-                    <div className="w-full max-w-xs">
+                    <div className="min-w-50">
                       <IssueStatusForm issueId={issue.id} currentStatus={issue.status} />
                     </div>
                   </div>

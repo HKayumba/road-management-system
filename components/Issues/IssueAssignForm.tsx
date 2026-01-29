@@ -41,9 +41,9 @@ export function IssueAssignForm({
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-2 w-full">
+    <form onSubmit={handleSubmit} className="space-y-2">
       <Select value={workerId} onValueChange={setWorkerId}>
-        <SelectTrigger className="w-full">
+        <SelectTrigger>
           <SelectValue placeholder="Assign to..." />
         </SelectTrigger>
         <SelectContent>

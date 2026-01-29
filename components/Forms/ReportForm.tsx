@@ -227,6 +227,37 @@ function ReportForm({ isFieldWorker = false, assignedTo }: ReportFormProps) {
               )}
             </div>
 
+            {/* Severity */}
+            <div className="space-y-2">
+              <Label>
+                Severity <span className="text-destructive">*</span>
+              </Label>
+              <Controller
+                name="severity"
+                control={control}
+                render={({ field }) => (
+                  <Select
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                  >
+                    <SelectTrigger className="w-full">
+                      <SelectValue placeholder="Select severity" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="Low">Low</SelectItem>
+                      <SelectItem value="Medium">Medium</SelectItem>
+                      <SelectItem value="High">High</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
+              />
+              {errors.severity && (
+                <p className="text-sm text-destructive">
+                  {errors.severity.message}
+                </p>
+              )}
+            </div>
+
             {/* Photo Upload with Preview */}
             <div className="space-y-2">
               <Label>Photo (Optional)</Label>

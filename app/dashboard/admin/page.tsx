@@ -1,20 +1,3 @@
-/**
- * Admin Dashboard Page
- * 
- * Main dashboard for Admin users. Displays:
- * - Overview statistics (Total Issues, Reported, In Progress, Completed)
- * - Recent issues list with thumbnails, status, severity, and assigned workers
- * - Quick access to full issues management page
- * 
- * Features:
- * - Role-based access control (Admin only)
- * - Real-time statistics from database
- * - Issue images with full-size view links
- * - Worker assignment information
- * 
- * Route: /dashboard/admin
- * Access: Admin role required
- */
 import { redirect } from "next/navigation";
 import { getSession } from "@/app/auth/actions/actions";
 import { getDashboardStats, getIssues } from "@/app/issues/actions";

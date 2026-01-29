@@ -1,16 +1,3 @@
-/**
- * Staff Login Page
- * 
- * Authentication page for Admin and Field Worker staff members.
- * Features:
- * - Email and password authentication
- * - Role-based redirect after login (Admin -> /dashboard/admin, FieldWorker -> /dashboard/fieldworker)
- * - Session management via HTTP-only cookies
- * - Error handling and validation
- * 
- * Route: /auth/login
- * Server Action: login() - validates credentials and creates session
- */
 "use client";
 
 import { useActionState } from "react";

@@ -1,17 +1,3 @@
-/**
- * Admin Field Workers Management Page
- * 
- * Displays all registered field workers and admin users.
- * Features:
- * - List all field workers with name, email, role, and join date
- * - Delete user accounts (cannot delete own account)
- * - Grid layout for easy browsing
- * 
- * Note: To add new users, navigate to /dashboard/admin/workers/new
- * 
- * Route: /dashboard/admin/workers
- * Access: Admin role required
- */
 import { redirect } from "next/navigation";
 import { getSession } from "@/app/auth/actions/actions";
 import { getAllFieldWorkers } from "@/app/users/actions";

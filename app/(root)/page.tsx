@@ -1,19 +1,3 @@
-/**
- * Home Page (Landing Page)
- *
- * Public-facing homepage for the Road Maintenance Management System.
- * Displays:
- * - Hero section with call-to-action buttons
- * - System statistics
- * - Features and benefits
- * - How it works process
- * - Types of issues that can be reported
- * - Final call-to-action section
- *
- * Routes:
- * - /report - Public issue reporting form
- * - /auth/login - Staff login page
- */
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, MapPin } from "lucide-react";
@@ -34,7 +18,7 @@ export default function Home() {
                 Report Road Issues Instantly
               </span>
             </div>
-            <h1 className="mb-6 text-4xl font-bold tracking-tight text-primary sm:text-5xl lg:text-6xl text-balance">
+            <h1 className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
               Help Us Keep Our Roads Safe and Maintained
             </h1>
             <p className="text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
@@ -50,10 +34,7 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="/auth/login">
-                <Button
-                  size="lg"
-                  className="gap-2 bg-transparent text-primary border boder-primary hover:text-white"
-                >
+                <Button size="lg" className="gap-2">
                   Staff Login
                   <ArrowRight className="h-4 w-4" />
                 </Button>
@@ -69,7 +50,7 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-3xl font-bold text-[#334155] lg:text-4xl">
+                <div className="text-3xl font-bold text-primary lg:text-4xl">
                   {stat.value}
                 </div>
                 <div className="mt-1 text-sm text-muted-foreground">
@@ -85,7 +66,7 @@ export default function Home() {
       <section className="px-4 md:px-20 py-16 bg-stone-50">
         <div className="container mx-auto">
           <div className="mx-auto mb-12 max-w-2xl text-center">
-            <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
+            <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
               Why Report Through Our System?
             </h2>
             <p className="text-muted-foreground">
@@ -120,7 +101,7 @@ export default function Home() {
       <section className="px-4 md:px-20 py-16">
         <div className="container mx-auto">
           <div className="mx-auto mb-12 max-w-2xl text-center">
-            <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
+            <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
               How It Works
             </h2>
             <p className="text-muted-foreground">
@@ -134,7 +115,7 @@ export default function Home() {
                 <div className="mb-4 text-5xl font-bold text-primary/20">
                   {step.number}
                 </div>
-                <h3 className="mb-2 font-semibold text-primary">
+                <h3 className="mb-2 font-semibold text-foreground">
                   {step.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">
@@ -153,7 +134,7 @@ export default function Home() {
       <section className="px-4 md:px-20 py-16">
         <div className="container mx-auto">
           <div className="mx-auto mb-12 max-w-2xl text-center">
-            <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
+            <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
               What Can You Report?
             </h2>
             <p className="text-muted-foreground">
@@ -163,10 +144,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {roadIssue.map((issue, index) => (
-              <Card
-                key={index}
-                className="border border-t-4 border-t-red-500 bg-card text-center hover:scale-104 duration-300"
-              >
+              <Card key={index} className="border-border bg-card text-center">
                 <CardContent className="p-6">
                   <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-destructive/10">
                     <issue.icon className="h-7 w-7 text-destructive" />
@@ -188,14 +166,14 @@ export default function Home() {
       <section className="px-4 md:px-20 py-16">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto bg-primary rounded-xl p-12 text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
               Ready to Report?
             </h2>
             <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
               It takes less than 2 minutes to submit a report. Help us maintain
               safer roads for everyone.
             </p>
-            <Link href="/report">
+            <Link href="/report-issue">
               <Button className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-primary-foreground text-primary font-medium hover:bg-primary-foreground/90 transition-colors">
                 Report Now
                 <ArrowRight className="w-5 h-5" />
