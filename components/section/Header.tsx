@@ -49,10 +49,8 @@ function Header() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-foreground",
-                  isActive
-                    ? "text-primary font-semibold"
-                    : "text-muted-foreground"
+                  "text-sm font-medium transition-colors hover:text-primary",
+                  isActive ? "text-primary font-bold" : "text-primary",
                 )}
               >
                 {item.label}
@@ -102,7 +100,7 @@ function Header() {
                   "text-sm font-medium transition-colors hover:text-foreground",
                   isActive
                     ? "text-primary font-semibold"
-                    : "text-muted-foreground"
+                    : "text-muted-foreground",
                 )}
               >
                 {item.label}

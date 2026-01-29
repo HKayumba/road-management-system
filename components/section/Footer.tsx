@@ -40,7 +40,7 @@ function Footer() {
                 <li>
                   <Link
                     href="/"
-                    className="text-sm text-muted-foreground hover:text-foreground"
+                    className="text-sm text-muted-foreground hover:text-primary hover:font-semibold"
                   >
                     Home
                   </Link>
@@ -48,15 +48,15 @@ function Footer() {
                 <li>
                   <Link
                     href="/report"
-                    className="text-sm text-muted-foreground hover:text-foreground"
+                    className="text-sm text-muted-foreground hover:text-primary hover:font-semibold"
                   >
                     Report an Issue
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/admin"
-                    className="text-sm text-muted-foreground hover:text-foreground"
+                    href="/auth/login"
+                    className="text-sm text-muted-foreground hover:text-primary hover:font-semibold"
                   >
                     Staff Portal
                   </Link>
@@ -70,18 +70,18 @@ function Footer() {
                 Contact
               </h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>Public Works Department</li>
-                <li>City Hall, Main Street</li>
-                <li>Phone: (555) 123-4567</li>
+                <li>Road Authority</li>
+                <li>52 Independence Ave</li>
+                <li>Phone: (+264) 85-739-8987</li>
                 <li>Email: roads@city.gov</li>
               </ul>
             </div>
           </div>
         </div>
 
-        <Separator className="mt-8 bg-red-600" />
+        <Separator className="mt-8 bg-blue-600" />
         <div className="mt-10 text-center">
-          <p className="text-sm">
+          <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} Road Maintenance Management
             System. All rights reserved.
           </p>

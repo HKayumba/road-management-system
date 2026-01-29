@@ -127,10 +127,6 @@
   body {
     @apply bg-background text-foreground;
   }
-  /* Heading colors - Primary: Deep Blue #1E3A8A */
-  h1, h2, h3, h4, h5, h6 {
-    color: #1E3A8A !important;
-  }
   /* Links - cursor pointer on hover */
   a {
     @apply hover:cursor-pointer;
@@ -141,5 +137,9 @@
 @layer utilities {
   .hover\:bg-primary-hover:hover {
     background-color: #1E40AF !important;
+  }
+  /* Utility class for headings that should use primary blue color */
+  .text-heading {
+    color: #1E3A8A;
   }
 }

@@ -34,7 +34,7 @@ function page() {
 
             {/* Header */}
             <div className="mb-8">
-              <h1 className="mb-2 text-2xl font-bold text-foreground lg:text-3xl">
+              <h1 className="mb-2 text-2xl font-bold text-primary lg:text-3xl">
                 Report a Road Problem
               </h1>
               <p className="text-muted-foreground">
@@ -44,13 +44,13 @@ function page() {
             </div>
 
             {/* Info banner */}
-            <div className="mb-8 flex items-start gap-3 rounded-lg border border-primary/20 bg-primary/5 p-4">
-              <Info className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+            <div className="mb-8 flex items-start gap-3 rounded-lg border border-red-100 bg-red-100 p-4">
+              <Info className="mt-0.5 h-5 w-5 shrink-0 text-red-500" />
               <div>
-                <p className="text-sm font-medium text-foreground">
+                <p className="text-sm font-medium text-red-500">
                   Civilian Report
                 </p>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-red-500">
                   Reports submitted through this form will be marked as civilian
                   submissions and will require verification by our team before
                   action is taken.
@@ -66,9 +66,9 @@ function page() {
             {/* Note */}
             <p className="mt-6 text-center text-sm text-muted-foreground">
               For emergencies or immediate hazards, please contact emergency
-              services at <span className="font-medium">911</span> or the Public
+              services at <span className="font-medium">(+264) 85-739-8987</span> or the Public
               Works hotline at{" "}
-              <span className="font-medium">(555) 123-4567</span>
+              <span className="font-medium">(+264) 85-739-8987</span>
             </p>
           </div>
         </div>
